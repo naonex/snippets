@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "shのコールに成功しました"
+echo $0のコールに成功しました
 
 exit
