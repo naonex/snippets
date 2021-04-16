@@ -1,5 +1,5 @@
 -- ÉÅÉ^ÉfÅ[É^èoóÕ
--- REV.2019.04.25
+-- REV.2021.04.07
 
 WHENEVER SQLERROR EXIT FAILURE ROLLBACK
 
@@ -31,7 +31,7 @@ select CASE WHEN OBJECT_TYPE = 'TABLE' THEN  --TABLESPACEñºéwíËãÂÇæÇØî≤Ç´èoÇ∑ÅiÉ
                  )
             ELSE METADATA 
        END as OUTPUT_LINE
-from (select dbms_metadata.get_ddl('&1','&2') as METADATA ,'&1' as OBJECT_TYPE from dual);
+from (select dbms_metadata.get_ddl('&1','&2','&4') as METADATA ,'&1' as OBJECT_TYPE from dual);
 
 spool off
 
